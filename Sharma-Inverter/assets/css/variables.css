@@ -1,0 +1,238 @@
+/* ==========================================================
+   SHARMA INVERTERS
+   VARIABLES.CSS
+========================================================== */
+
+:root{
+
+    /*==========================
+        COLORS
+    ==========================*/
+
+    --primary:#0C8A3D;
+
+    --primary-dark:#06662c;
+
+    --secondary:#D62828;
+
+    --secondary-dark:#b51f1f;
+
+    --white:#ffffff;
+
+    --black:#111111;
+
+    --text:#333333;
+
+    --text-light:#666666;
+
+    --border:#e6e6e6;
+
+    --bg:#f8f9fb;
+
+    --card:#ffffff;
+
+    --success:#16a34a;
+
+    --warning:#f59e0b;
+
+    --danger:#ef4444;
+
+    --overlay:rgba(0,0,0,.55);
+
+
+
+    /*==========================
+        DARK MODE
+    ==========================*/
+
+    --dark-bg:#0f1115;
+
+    --dark-card:#171a21;
+
+    --dark-border:#2d3138;
+
+    --dark-text:#ffffff;
+
+    --dark-text-light:#cfcfcf;
+
+
+
+    /*==========================
+        FONT
+    ==========================*/
+
+    --font:'Poppins',sans-serif;
+
+
+
+    /*==========================
+        FONT SIZE
+    ==========================*/
+
+    --fs-xs:12px;
+
+    --fs-sm:14px;
+
+    --fs-md:16px;
+
+    --fs-lg:18px;
+
+    --fs-xl:22px;
+
+    --fs-2xl:28px;
+
+    --fs-3xl:36px;
+
+    --fs-4xl:48px;
+
+
+
+    /*==========================
+        FONT WEIGHT
+    ==========================*/
+
+    --fw-300:300;
+
+    --fw-400:400;
+
+    --fw-500:500;
+
+    --fw-600:600;
+
+    --fw-700:700;
+
+    --fw-800:800;
+
+
+
+    /*==========================
+        CONTAINER
+    ==========================*/
+
+    --container:1250px;
+
+
+
+    /*==========================
+        NAVBAR
+    ==========================*/
+
+    --navbar-height:72px;
+
+    --mobile-navbar:64px;
+
+
+
+    /*==========================
+        BORDER
+    ==========================*/
+
+    --radius-xs:6px;
+
+    --radius-sm:10px;
+
+    --radius-md:14px;
+
+    --radius-lg:18px;
+
+    --radius-xl:25px;
+
+    --radius-circle:50%;
+
+
+
+    /*==========================
+        SHADOW
+    ==========================*/
+
+    --shadow-sm:0 2px 10px rgba(0,0,0,.05);
+
+    --shadow-md:0 8px 25px rgba(0,0,0,.08);
+
+    --shadow-lg:0 18px 40px rgba(0,0,0,.12);
+
+    --shadow-xl:0 30px 60px rgba(0,0,0,.18);
+
+
+
+    /*==========================
+        TRANSITION
+    ==========================*/
+
+    --transition:.35s ease;
+
+    --transition-fast:.2s ease;
+
+    --transition-slow:.6s ease;
+
+
+
+    /*==========================
+        Z INDEX
+    ==========================*/
+
+    --z-loader:99999;
+
+    --z-navbar:9999;
+
+    --z-topbar:9998;
+
+    --z-floating:999;
+
+    --z-popup:10000;
+
+
+
+    /*==========================
+        SECTION GAP
+    ==========================*/
+
+    --section-space:70px;
+
+    --section-space-mobile:50px;
+
+
+
+    /*==========================
+        BUTTON HEIGHT
+    ==========================*/
+
+    --btn-height:48px;
+
+
+
+}
+
+
+
+/* ==========================================================
+                DARK MODE VARIABLES
+========================================================== */
+
+body.dark{
+
+    --bg:var(--dark-bg);
+
+    --card:var(--dark-card);
+
+    --border:var(--dark-border);
+
+    --text:var(--dark-text);
+
+    --text-light:var(--dark-text-light);
+
+}
+
+
+
+/* ==========================================================
+                RESET VARIABLES
+========================================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+}

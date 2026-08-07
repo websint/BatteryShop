@@ -1,0 +1,493 @@
+/* ==========================================================
+   SHARMA INVERTERS
+   RESPONSIVE.CSS
+========================================================== */
+
+
+/* ==========================================================
+                    LARGE DESKTOP
+========================================================== */
+
+@media (min-width:1400px){
+
+.container{
+
+    max-width:1280px;
+
+}
+
+}
+
+
+
+/* ==========================================================
+                    DESKTOP
+========================================================== */
+
+@media (max-width:1200px){
+
+:root{
+
+    --section-space:65px;
+
+}
+
+.container{
+
+    width:94%;
+
+}
+
+}
+
+
+
+/* ==========================================================
+                    LAPTOP
+========================================================== */
+
+@media (max-width:992px){
+
+:root{
+
+    --navbar-height:68px;
+
+    --section-space:60px;
+
+}
+
+.container{
+
+    width:94%;
+
+}
+
+h1{
+
+    font-size:2.8rem;
+
+}
+
+h2{
+
+    font-size:2rem;
+
+}
+
+.section-title{
+
+    margin-bottom:35px;
+
+}
+
+.btn{
+
+    min-width:160px;
+
+}
+
+.grid{
+
+    gap:20px;
+
+}
+
+}
+
+
+
+/* ==========================================================
+                    TABLET
+========================================================== */
+
+@media (max-width:768px){
+
+:root{
+
+    --section-space:55px;
+
+}
+
+.container{
+
+    width:92%;
+
+}
+
+h1{
+
+    font-size:2.3rem;
+
+}
+
+h2{
+
+    font-size:1.8rem;
+
+}
+
+h3{
+
+    font-size:1.15rem;
+
+}
+
+p{
+
+    font-size:14px;
+
+}
+
+.btn{
+
+    min-width:150px;
+
+    height:46px;
+
+    font-size:14px;
+
+}
+
+.section-title{
+
+    margin-bottom:30px;
+
+}
+
+.grid{
+
+    gap:18px;
+
+}
+
+.card{
+
+    border-radius:14px;
+
+}
+
+input,
+select,
+textarea{
+
+    padding:14px;
+
+}
+
+.icon{
+
+    width:50px;
+
+    height:50px;
+
+    font-size:20px;
+
+}
+
+}
+
+
+
+/* ==========================================================
+                    MOBILE
+========================================================== */
+
+@media (max-width:576px){
+
+:root{
+
+    --section-space:50px;
+
+}
+
+.container{
+
+    width:92%;
+
+}
+
+section{
+
+    padding:50px 0;
+
+}
+
+h1{
+
+    font-size:2rem;
+
+}
+
+h2{
+
+    font-size:1.6rem;
+
+}
+
+h3{
+
+    font-size:1.05rem;
+
+}
+
+p{
+
+    font-size:14px;
+
+}
+
+.btn{
+
+    width:100%;
+
+    min-width:100%;
+
+}
+
+.section-title{
+
+    margin-bottom:28px;
+
+}
+
+.grid{
+
+    gap:16px;
+
+}
+
+.card{
+
+    border-radius:12px;
+
+}
+
+.icon{
+
+    width:48px;
+
+    height:48px;
+
+}
+
+input,
+select{
+
+    height:48px;
+
+}
+
+textarea{
+
+    min-height:120px;
+
+}
+
+}
+
+
+
+/* ==========================================================
+                SMALL MOBILE
+========================================================== */
+
+@media (max-width:420px){
+
+.container{
+
+    width:94%;
+
+}
+
+h1{
+
+    font-size:1.8rem;
+
+}
+
+h2{
+
+    font-size:1.45rem;
+
+}
+
+p{
+
+    font-size:13px;
+
+}
+
+.btn{
+
+    height:45px;
+
+    font-size:13px;
+
+}
+
+.section-title{
+
+    margin-bottom:24px;
+
+}
+
+.grid{
+
+    gap:15px;
+
+}
+
+.card{
+
+    border-radius:10px;
+
+}
+
+input,
+select{
+
+    padding:12px;
+
+}
+
+}
+
+
+
+/* ==========================================================
+            COMMON RESPONSIVE HELPERS
+========================================================== */
+
+.mobile-hide{
+
+    display:block;
+
+}
+
+.desktop-hide{
+
+    display:none;
+
+}
+
+@media(max-width:768px){
+
+.mobile-hide{
+
+    display:none !important;
+
+}
+
+.desktop-hide{
+
+    display:block !important;
+
+}
+
+}
+
+
+
+/* ==========================================================
+        RESPONSIVE IMAGE
+========================================================== */
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+
+
+/* ==========================================================
+        TABLE SCROLL
+========================================================== */
+
+.table-responsive{
+
+    overflow-x:auto;
+
+}
+
+
+
+/* ==========================================================
+        FLEX HELPERS
+========================================================== */
+
+@media(max-width:768px){
+
+.flex-column-mobile{
+
+    flex-direction:column;
+
+}
+
+.text-center-mobile{
+
+    text-align:center;
+
+}
+
+.justify-center-mobile{
+
+    justify-content:center;
+
+}
+
+.align-center-mobile{
+
+    align-items:center;
+
+}
+
+}
+
+
+
+/* ==========================================================
+            MOBILE STICKY CALL
+========================================================== */
+
+@media(max-width:768px){
+
+.mobile-call-bar{
+
+    position:fixed;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    z-index:9999;
+
+}
+
+body{
+
+    padding-bottom:65px;
+
+}
+
+}
+
+
+
+/* ==========================================================
+            DESKTOP FLOAT
+========================================================== */
+
+@media(min-width:769px){
+
+body{
+
+    padding-bottom:0;
+
+}
+
+}
