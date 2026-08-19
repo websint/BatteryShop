@@ -1,63 +1,53 @@
 /*==========================================================
-        SHARMA INVERTERS
+        Kushwaha INVERTERS
         WHATSAPP ENQUIRY
 ==========================================================*/
 
 const quoteForm = document.getElementById("quoteForm");
 
 if (quoteForm) {
+  quoteForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    quoteForm.addEventListener("submit", function (e) {
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
 
-        e.preventDefault();
+    /* ---------------- Validation ---------------- */
 
-        const name = document.getElementById("name").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const service = document.getElementById("service").value;
+    if (name.length < 3) {
+      alert("Please enter a valid name.");
 
-        /* ---------------- Validation ---------------- */
+      return;
+    }
 
-        if (name.length < 3) {
+    if (!/^[6-9]\d{9}$/.test(phone)) {
+      alert("Please enter a valid 10 digit mobile number.");
 
-            alert("Please enter a valid name.");
+      return;
+    }
 
-            return;
+    if (service === "") {
+      alert("Please select a service.");
 
-        }
+      return;
+    }
 
-        if (!/^[6-9]\d{9}$/.test(phone)) {
+    /* ---------------- Current Date ---------------- */
 
-            alert("Please enter a valid 10 digit mobile number.");
+    const today = new Date();
 
-            return;
+    const date = today.toLocaleDateString("en-IN", {
+      day: "2-digit",
 
-        }
+      month: "short",
 
-        if (service === "") {
+      year: "numeric",
+    });
 
-            alert("Please select a service.");
+    /* ---------------- WhatsApp Message ---------------- */
 
-            return;
-
-        }
-
-        /* ---------------- Current Date ---------------- */
-
-        const today = new Date();
-
-        const date = today.toLocaleDateString("en-IN", {
-
-            day: "2-digit",
-
-            month: "short",
-
-            year: "numeric"
-
-        });
-
-        /* ---------------- WhatsApp Message ---------------- */
-
-        const message = `Hello Sharma Inverters,
+    const message = `Hello Kushwaha Inverters,
 
 Name : ${name}
 
@@ -71,13 +61,10 @@ Please share price and details.
 
 Thank You.`;
 
-        const whatsappURL =
-            `https://wa.me/918595973195?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/918292813953?text=${encodeURIComponent(message)}`;
 
-        window.open(whatsappURL, "_blank");
+    window.open(whatsappURL, "_blank");
 
-        quoteForm.reset();
-
-    });
-
+    quoteForm.reset();
+  });
 }

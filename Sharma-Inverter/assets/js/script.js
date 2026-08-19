@@ -105,7 +105,7 @@ filterButtons.forEach((button) => {
 ========================== */
 
 function sendProduct(product) {
-  const message = `Hello Sharma Inverters,
+  const message = `Hello Kushwaha Inverters,
 
 I am interested in
 
@@ -116,7 +116,7 @@ Please share today's best offer price.
 Thank You.`;
 
   window.open(
-    `https://wa.me/918595973195?text=${encodeURIComponent(message)}`,
+    `https://wa.me/918292813953?text=${encodeURIComponent(message)}`,
 
     "_blank",
   );

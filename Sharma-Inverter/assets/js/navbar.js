@@ -1,5 +1,5 @@
 /*==========================================================
-    SHARMA INVERTERS
+    Kushwaha INVERTERS
     NAVBAR
 ==========================================================*/
 
@@ -15,7 +15,7 @@ navbar.innerHTML = `
 
     <a href="#hero" class="logo">
 
-        <img src="assets/images/logo/logo.png" alt="Sharma Inverters">
+        <img src="assets/images/logo/logo.png" alt="Kushwaha Inverters">
 
     </a>
 
@@ -51,7 +51,7 @@ navbar.innerHTML = `
 
         </button>
 
-        <a href="tel:8595973195" class="call-btn">
+        <a href="tel:8292813953" class="call-btn">
 
             <i class="fa-solid fa-phone"></i>
 
@@ -102,7 +102,7 @@ navbar.innerHTML = `
 
 <li>
 
-<a href="tel:8595973195">
+<a href="tel:8292813953">
 
 <i class="fa-solid fa-phone"></i>
 
@@ -114,7 +114,7 @@ Call Now
 
 <li>
 
-<a href="https://wa.me/918595973195">
+<a href="https://wa.me/918292813953">
 
 <i class="fa-brands fa-whatsapp"></i>
 
@@ -133,156 +133,108 @@ WhatsApp
                 HAMBURGER
 ==========================================================*/
 
-const hamburger=document.querySelector(".hamburger");
+const hamburger = document.querySelector(".hamburger");
 
-const mobileMenu=document.querySelector(".mobile-menu");
+const mobileMenu = document.querySelector(".mobile-menu");
 
-hamburger.onclick=()=>{
+hamburger.onclick = () => {
+  hamburger.classList.toggle("active");
 
-hamburger.classList.toggle("active");
-
-mobileMenu.classList.toggle("active");
-
+  mobileMenu.classList.toggle("active");
 };
 
+document.querySelectorAll(".mobile-menu a").forEach((item) => {
+  item.onclick = () => {
+    hamburger.classList.remove("active");
 
-
-document.querySelectorAll(".mobile-menu a").forEach(item=>{
-
-item.onclick=()=>{
-
-hamburger.classList.remove("active");
-
-mobileMenu.classList.remove("active");
-
-}
-
+    mobileMenu.classList.remove("active");
+  };
 });
-
 
 /*==========================================================
                 ACTIVE MENU
 ==========================================================*/
 
-const sections=document.querySelectorAll("section");
+const sections = document.querySelectorAll("section");
 
-const navLinks=document.querySelectorAll(".nav-links a");
+const navLinks = document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
+  let current = "";
 
-let current="";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 120;
 
-sections.forEach(section=>{
+    const sectionHeight = section.clientHeight;
 
-const sectionTop=section.offsetTop-120;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
 
-const sectionHeight=section.clientHeight;
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
 
-if(pageYOffset>=sectionTop){
-
-current=section.getAttribute("id");
-
-}
-
+    if (link.getAttribute("href") == "#" + current) {
+      link.classList.add("active");
+    }
+  });
 });
-
-navLinks.forEach(link=>{
-
-link.classList.remove("active");
-
-if(link.getAttribute("href")=="#"+current){
-
-link.classList.add("active");
-
-}
-
-});
-
-});
-
 
 /*==========================================================
                 NAVBAR SHADOW
 ==========================================================*/
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".navbar");
 
-const nav=document.querySelector(".navbar");
-
-nav.classList.toggle("scroll",window.scrollY>50);
-
+  nav.classList.toggle("scroll", window.scrollY > 50);
 });
-
 
 /*==========================================================
                 HIDE NAVBAR
 ==========================================================*/
 
-let lastScroll=0;
+let lastScroll = 0;
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".navbar");
 
-const nav=document.querySelector(".navbar");
+  const current = window.pageYOffset;
 
-const current=window.pageYOffset;
+  if (current > lastScroll && current > 100) {
+    nav.classList.add("hide");
+  } else {
+    nav.classList.remove("hide");
+  }
 
-if(current>lastScroll && current>100){
-
-nav.classList.add("hide");
-
-}
-
-else{
-
-nav.classList.remove("hide");
-
-}
-
-lastScroll=current;
-
+  lastScroll = current;
 });
-
 
 /*==========================================================
                 DARK MODE
 ==========================================================*/
 
-const themeBtn=document.getElementById("themeToggle");
+const themeBtn = document.getElementById("themeToggle");
 
-const body=document.body;
+const body = document.body;
 
+if (localStorage.getItem("theme") == "dark") {
+  body.classList.add("dark");
 
-
-if(localStorage.getItem("theme")=="dark"){
-
-body.classList.add("dark");
-
-themeBtn.innerHTML='<i class="fa-solid fa-sun"></i>';
-
+  themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
 }
 
+themeBtn.onclick = () => {
+  body.classList.toggle("dark");
 
+  if (body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
 
-themeBtn.onclick=()=>{
+    themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+  } else {
+    localStorage.setItem("theme", "light");
 
-body.classList.toggle("dark");
-
-
-
-if(body.classList.contains("dark")){
-
-localStorage.setItem("theme","dark");
-
-themeBtn.innerHTML='<i class="fa-solid fa-sun"></i>';
-
-}
-
-else{
-
-localStorage.setItem("theme","light");
-
-themeBtn.innerHTML='<i class="fa-solid fa-moon"></i>';
-
-}
-
+    themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+  }
 };

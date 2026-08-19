@@ -1,5 +1,5 @@
 /*==========================================================
-        SHARMA INVERTERS
+        Kushwaha INVERTERS
         PREMIUM LOADER
 ==========================================================*/
 
@@ -29,7 +29,7 @@ loader.innerHTML = `
 
     <h3>Powering Up...</h3>
 
-    <p>Loading Sharma Inverters</p>
+    <p>Loading Kushwaha Inverters</p>
 
 </div>
 

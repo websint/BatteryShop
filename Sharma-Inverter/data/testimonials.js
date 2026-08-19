@@ -3,21 +3,21 @@ const testimonials = [
     name: "Rishi kumar",
     rating: 5,
     comment:
-      "Sharma Batteries stands out for its high-quality products and excellent customer support. The batteries are durable, efficient, and fairly priced. The staff is knowledgeable and always ready to help,",
+      "Kushwaha Batteries stands out for its high-quality products and excellent customer support. The batteries are durable, efficient, and fairly priced. The staff is knowledgeable and always ready to help,",
   },
 
   {
     name: "Alok kumar",
     rating: 5,
     comment:
-      "I had a great experience at Sharma Inverter and Battery Shop. They offer high-quality inverters and batteries at reasonable prices. ",
+      "I had a great experience at Kushwaha Inverter and Battery Shop. They offer high-quality inverters and batteries at reasonable prices. ",
   },
 
   {
     name: "Prem saini",
     rating: 5,
     comment:
-      "I had a great experience at Sharma Inverter and Battery Shop. They offer high-quality inverters and batteries at reasonable prices.",
+      "I had a great experience at Kushwaha Inverter and Battery Shop. They offer high-quality inverters and batteries at reasonable prices.",
   },
 
   {
@@ -28,10 +28,10 @@ const testimonials = [
   },
 
   {
-    name: "Yogesh sharma",
+    name: "Yogesh Kushwaha",
     rating: 5,
     comment:
-      "I have buy a double inverter battery set from sharma inverter battery the product price is very Reasonable and the product quality is good I m prefer to anyone to buy inverter battery come to this shop.",
+      "I have buy a double inverter battery set from Kushwaha inverter battery the product price is very Reasonable and the product quality is good I m prefer to anyone to buy inverter battery come to this shop.",
   },
 
   {
@@ -41,7 +41,7 @@ const testimonials = [
   },
 
   {
-    name: "Deepak Sharma",
+    name: "Deepak Kushwaha",
     rating: 5,
     comment: "Installation completed within one hour.",
   },
@@ -55,7 +55,7 @@ const testimonials = [
   {
     name: "Pawan Kumar",
     rating: 5,
-    comment: "Good experience with Sharma Inverters.",
+    comment: "Good experience with Kushwaha Inverters.",
   },
 
   {
@@ -83,7 +83,7 @@ const testimonials = [
   },
 
   {
-    name: "Karan Sharma",
+    name: "Karan Kushwaha",
     rating: 5,
     comment: "Best inverter shop in our area.",
   },

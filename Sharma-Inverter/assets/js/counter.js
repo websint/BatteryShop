@@ -1,5 +1,5 @@
 /*==========================================================
-        SHARMA INVERTERS
+        Kushwaha INVERTERS
         COUNTER
 ==========================================================*/
 
@@ -8,69 +8,54 @@ const counters = document.querySelectorAll(".counter-number");
 let counterStarted = false;
 
 function startCounter() {
+  if (counterStarted) return;
 
-    if (counterStarted) return;
+  counterStarted = true;
 
-    counterStarted = true;
+  counters.forEach((counter) => {
+    const target = +counter.dataset.target;
 
-    counters.forEach(counter => {
+    const increment = Math.ceil(target / 120);
 
-        const target = +counter.dataset.target;
+    let current = 0;
 
-        const increment = Math.ceil(target / 120);
+    const updateCounter = () => {
+      current += increment;
 
-        let current = 0;
+      if (current >= target) {
+        current = target;
 
-        const updateCounter = () => {
+        counter.innerHTML = target + "+";
 
-            current += increment;
+        return;
+      }
 
-            if (current >= target) {
+      counter.innerHTML = current + "+";
 
-                current = target;
+      requestAnimationFrame(updateCounter);
+    };
 
-                counter.innerHTML = target + "+";
-
-                return;
-
-            }
-
-            counter.innerHTML = current + "+";
-
-            requestAnimationFrame(updateCounter);
-
-        };
-
-        updateCounter();
-
-    });
-
+    updateCounter();
+  });
 }
 
 const counterSection = document.getElementById("counter");
 
 if (counterSection) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startCounter();
 
-    const observer = new IntersectionObserver((entries) => {
+          observer.unobserve(counterSection);
+        }
+      });
+    },
+    {
+      threshold: 0.35,
+    },
+  );
 
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                startCounter();
-
-                observer.unobserve(counterSection);
-
-            }
-
-        });
-
-    }, {
-
-        threshold: 0.35
-
-    });
-
-    observer.observe(counterSection);
-
+  observer.observe(counterSection);
 }
